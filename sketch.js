@@ -13,8 +13,8 @@ function setup() {
 	world = engine.world;
 
 	ground=new Ground(width/2, height-25, width, 10);
-	rectObject=new Dustbin(width-200,height-40,150,20);
-	paper=new Paper(130,100);
+	rectObject=new Dustbin(width-150,height-40,150,20);
+	paper=new Paper(180,100);
 
 	launch = new Launcher(paper.body,{x:200,y:150});
 
@@ -31,7 +31,7 @@ function draw() {
 
 function keyPressed(){
 	if(keyCode===UP_ARROW){
-		Matter.Body.applyForce(paper.body,paper.body.position,{x:65,y:-65});
+		Matter.Body.applyForce(paper.body,paper.body.position,{x:70,y:-70});
 	}
 }
 
